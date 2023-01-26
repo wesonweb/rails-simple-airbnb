@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row justify-content-center mt-3 ">
+    <div class="col-md-8 col-lg-6 bg-light p-3 rounded">
+      <h1 class="text-center mb-0">Add a new flat</h1>
+
+          <%= simple_form_for(@flat) do |f| %>
+            <%= f.error_notification %>
+            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            <div class="row justify-content-center mt-5">
+              <div class="col">
+                <div class="form-inputs">
+                  <%= f.input :name %>
+                  <%= f.input :address %>
+                  <%= f.input :description %>
+                  <%= f.input :price_per_night %>
+                  <%= f.input :number_of_guests %>
+                </div>
+
+                <div class="form-actions">
+                  <%= f.button :submit, class: "btn btn-primary" %>
+                </div>
+                <%= link_to 'back to all flats', flats_path, class: "d-block mt-2"  %>
+              </div>
+            </div>
+          <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
