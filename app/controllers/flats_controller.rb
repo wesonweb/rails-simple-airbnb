@@ -1,5 +1,5 @@
 class FlatsController < ApplicationController
-  before_action :set_flat, only: %i[show]
+  before_action :set_flat, only: %i[show edit update]
   def index
     @flats = Flat.all
   end
@@ -18,6 +18,16 @@ class FlatsController < ApplicationController
   end
 
   def show; end
+
+  def edit; end
+
+  def update
+    if @flat.update(flat_params)
+      redirect_to @flat, notice: 'Flat was successfully updated.'
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
   private
 
