@@ -23,7 +23,10 @@
           <div class="flex">
             <span><%= link_to 'more info', flat, class: "link-primary me-1" %></span>
             <span><%= link_to 'edit', edit_flat_path(flat), class: "link-warning me-1" %></span>
-            <span><%= link_to 'remove', flat, class: "link-danger me-1" %></span>
+            <span><%= link_to 'remove',
+              flat_path(flat),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+              class: "link-danger me-1" %></span>
           </div>
         </div>
       </div>
