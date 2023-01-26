@@ -1,1 +1,33 @@
-<h1>All flats</h1>
+<div class="container-md">
+  <div class="row">
+    <h1>All our flats</h1>
+    <p>all <%=@flats.length %> flats</p>
+  </div>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-md-4">
+      <div class="card mb-3 bg-light">
+        <div class="card-img">
+        </div>
+        <div class="card-content p-3">
+          <h2 class="fs-3"><%= flat.name %></h2>
+          <p><%= flat.address %></p>
+            <div class="card-details">
+              <div class="flex">
+                <span class="me-3"><i class="fa-regular fa-credit-card"></i> £<%= flat.price_per_night %></span>
+                <span class="me-3"><i class="fa-solid fa-people-group"></i> <%= flat.number_of_guests %></span>
+              </div>
+            </div>
+        </div>
+        <div class="card-links p-3 bg-white">
+          <div class="flex">
+            <span>more info</span>
+            <span>edit</span>
+            <span>remove</span>
+          </div>
+        </div>
+      </div>
+    </div>
+   <% end %>
+  </div>
+</div>
