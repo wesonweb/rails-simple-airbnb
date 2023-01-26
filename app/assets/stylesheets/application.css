@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+.bg-img {
+  /* background-image: url('../images/flats.jpg'); */
+  z-index: -1;
+  position: relative;
+  height: 350px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.mt-negative {
+  z-index: 10;
+  margin-top: -75px;
+}

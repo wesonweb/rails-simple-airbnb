@@ -1,8 +1,60 @@
 <div class="container-med">
   <div class="row">
     <div class="col">
-    <p class="text-success"><%= notice %></p>
-      <h1>Flat: <%= @flat.name %></h1>
+      <p class="text-success"><%= notice %></p>
     </div>
   </div>
+    <div class="bg-img" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')">
+    </div>
+    <div class="container-md mt-negative">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="p-3 bg-light mb-2">
+            <h1>Flat: <%= @flat.name %></h1>
+            <p> <%= @flat.address %></p>
+          </div>
+
+          <div class="p-3 bg-light mb-2">
+            <h3 class="lead">A bit more about this flat</h3>
+            <p> <%= @flat.description %></p>
+            <div class="bg-img" style="background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=10 Clifton Gardens London W9 1DT&zoom=13&scale=2&size=1000x1000&maptype=roadmap&markers=color:red%7C10 Clifton Gardens London W9 1DT&key=AIzaSyAPpx0wk4d-AQ8bhe8-a-ihC7NXLoPElhg')">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-light p-3 mb-2">
+            <h2 class="h5">Book this place!</h2>
+            <form action="">
+              <div class="input-group">
+                <label for="from" class="input-group-text">From: </label>
+                <input type="date" class="form-control" value="from" id="from">
+              </div>
+              <div class="input-group">
+                <label for="to" class="mt-2 h-100 input-group-text">To: </label>
+                <input type="date" class="form-control" value="to" id="to">
+              </div>
+              <button class="w-100 btn btn-primary mt-2">Book</button>
+            </form>
+          </div>
+          <div class="bg-light p-3 mb-2">
+            <h2 class="h4">Details</h2>
+            <div>
+              <span><%= @flat.number_of_guests %> people</span>
+              <span>£<%= @flat.price_per_night %></span>
+            </div>
+          </div>
+          <div class="bg-light p-3 mb-2">
+            <div class="flex">
+              <p>Share</p>
+              <div class="flex">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-pinterest"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 </div>
